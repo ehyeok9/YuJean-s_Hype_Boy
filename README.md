@@ -1,9 +1,10 @@
 ## YuJeans_Hype_Boy
---- 
+
 이 곳은 [2023학년도 1학기 모각코](https://mogako.cs.kookmin.ac.kr/) 보고서 저장소입니다 !
 
 <img src="https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/img/0306/%EC%82%AC%EC%A7%84%202023.%203.%206.%20%EC%98%A4%ED%9B%84%206.57.jpg" width="160%" height="90%" title="첫 모임 사진"></img>
 
+---
 
 안녕하세요.
 
@@ -24,7 +25,7 @@
 감사합니다.
 
 ## Member
-----
+
 
 - [김유진](https://github.com/Erica1217) : 아자아자 잘해보자 !
 - [김채환](https://github.com/chkim417) : 알고리즘 너 딱 기다려..
