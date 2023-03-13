@@ -32,3 +32,7 @@
 - [김혜성](https://github.com/Borikhs) : 랩실 최강자를 따라잡을 예정.
 - [이혁규](https://github.com/ehyeok9) : 초기 목표를 모두 이뤄보자.
 - [한창훈](https://github.com/codingnoye) : 따라올테면 따라와봐 ㅋ.
+
+## Report
+- [1주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0306.md)
+- [2주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0313.md)-
