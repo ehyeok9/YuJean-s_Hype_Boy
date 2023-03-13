@@ -35,4 +35,4 @@
 
 ## Report
 - [1주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0306.md)
-- [2주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0313.md)-
+- [2주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0313.md)
