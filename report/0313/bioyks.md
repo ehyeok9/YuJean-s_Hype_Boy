@@ -55,3 +55,88 @@ for i in range(l):
     print(answer[i])
 ```
 
+### 2. [B : Z(1074)](https://www.acmicpc.net/problem/1074)  
+
+규칙성 : z 모양으로 돌 때 각각의 꼭지점을 방문하는 순서대로 섹터 0 1 2 3을 메겨 큰 z 부터 작은 z까지 각 자리마다 섹터별로 덧셈을 해줌 
+
+```python
+N, r, c = map(int, input().split())
+sector= -1
+answer = 0
+for i in range(1, N+1):
+    std = 2**(N-i)
+    if r<std:
+        if c<std:
+            sector = 0
+        else:
+            c = c-std
+            sector = 1
+    else:
+        r = r-std
+        if c<std:
+            sector = 2
+        else:
+            sector = 3
+            c = c-std
+    answer +=(2**(2*N-2*i))*sector
+    
+print(answer)
+```
+
+### 3. [C.에디터(1406)](https://www.acmicpc.net/problem/1406)
+커서를 기준으로 앞뒤에 있을 deque를 두 개 만들어 준다.  
+입력에 맞게 값들을 앞뒤 값들을 디큐 사이에서 옮겨준다.  
+두 디큐를 앞쪽에서부터 빌 때까지 프린트해준다.
+
+
+
+### 4. [D.다음 순열(10972)](https://www.acmicpc.net/problem/10972)  
+
+2 4 3 1 5
+2 4 3 5 1
+2 4 5 1 3
+2 4 5 3 1
+
+ 
+ 위에서 규칙성을 말해보자면 뒤에서부터 탐색해서 앞쪽 수가 더 작은 곳을 찾아서 인덱스를 저장하고 다시 맨 뒤부터 탐색해서 저장한 인덱스(i-1)의 값보다 큰 곳이 나오면 서로 스위치 해주고 i-1 번쨰 인덱스 뒤를 다시 정렬해준다.
+
+```python
+t = int(input())
+combi = list(map(int, input().split()))
+
+for i in range(t-1, 0, -1):
+    if combi[i-1] < combi[i]:
+        for j in range(t-1, 0, -1):
+            if combi[i-1] < combi[j]:
+                combi[i-1], combi[j] = combi[j], combi[i-1]
+                combi = combi[:i] + sorted(combi[i:])
+                print(*combi)
+                exit()
+print(-1)
+```
+
+### 5. [E.회의실 배정(1931)](https://www.acmicpc.net/problem/1931) 
+
+ 시작시간과 끝시간을 배열에 넣고 모든 회의 일정을 넣은 배열을 만든다.
+ 이후 끝시간, 시작시간 을 우선순으로 하여 정렬한다.
+ 이후 포문을 돌려 첫 회의는 넣고 다음부턴  다음 회의의 시작시간이 전 회의의 끝시간보다 일찍이면 넘어가고 아니면 붙이는 식으로 하여 총 회의 개수를 구한다.
+
+```python
+N = int(input())
+meetings = []
+for i in range(N):
+    meetings.append(list(map(int, input().split())))
+meetings.sort(key=lambda x:(x[1],x[0]))
+cnt=1
+a=meetings[0]
+if N!=1:
+    for i in range(1,N):
+        if a[1]>meetings[i][0]:
+            continue
+        else:
+            cnt+=1
+            a=meetings[i]
+            
+print(cnt)
+
+```
