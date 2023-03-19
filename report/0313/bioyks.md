@@ -7,6 +7,12 @@
 
 ### 1. [A : 단지번호붙이기(2667)](https://www.acmicpc.net/problem/2667)
 
+collections library에서 deque import
+
+N: 테스트 케이스 개수
+vilage: 0,1 로 표현된 이중배열. 0이면 없고 1이면 집이 있음.
+answer: 단지의 크기로 정렬한 단지 크기의 배열
+def BFS(graph,a,b): 너비우선탐색 알고리즘을 이용하여 서로 붙어있는 집의 수를 세어 단지의 크기를 측정하는 함수. 만약 vilage[a][b]의 값이 1이면 그 인덱스의 상하좌우에 1이 있는 지를 탐색 하고 큐에 append한다. 
 ```python
 from collections import deque
 N = int(input())
