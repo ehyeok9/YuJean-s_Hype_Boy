@@ -38,9 +38,36 @@ else:
 ```
 
 ### 3. [C.주식(11501)](https://www.acmicpc.net/problem/11501)  
+일단 주식 가격을 리스트에 저장하고 완전탐색을 하여 뾰족한 곳을 찾는다(point)
+가장 높은곳의 왼쪽은 무조건 다 사야 하므로 가장 내림차순을 한 후 0번인덱스부터 돌면서 
+전에있던 더 높은 첨점 보다 앞에있으면 무시 뒤에있으면 전의 첨점 다음 인덱스부터 현 첨점 인덱스 전까지 사고 판다.
 
   
 ```python
+t = int(input())
+
+for _ in range(t):
+    stock_count= int(input())
+    stock_list=list(map(int,input().split()))
+    action=[-1 for _ in range(stock_count)] # -1:null 0: buy 1: sell
+    marked=-1
+    sum=0
+    points=[]
+    for i in range(1,stock_count-1):
+        if stock_list[i-1]<stock_list[i] and stock_list[i]>stock_list[i+1]:
+            points.append([i,stock_list[i]])
+    points.append([0,stock_list[0]])
+    points.append([stock_count-1,stock_list[-1]])
+    points.sort(key=lambda x:x[1], reverse=True)
+    for point in points:
+        if marked>point[0]:
+            continue
+        else:
+            for idx in range(marked+1, point[0]):
+                if point[1]> stock_list[idx]:
+                    sum+= point[1]-stock_list[idx]
+                    marked=point[0]
+    print(sum)
 
 ```
 
