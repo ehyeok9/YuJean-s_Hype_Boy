@@ -40,3 +40,4 @@
 - [4주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0327.md)
 - [5주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0403.md)
 - [6주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0410.md)
+- [7주차 보고서](https://github.com/ehyeok9/YuJeans_Hype_Boy/blob/main/report/0501.md)
